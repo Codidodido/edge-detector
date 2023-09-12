@@ -14,7 +14,7 @@ def process_image(image, threshold):
 
     new_image = Image.new(image.mode, image.size)
     width, height = image.size
-
+    print(f"Process image :{image}\nSize : {width}x{height}\n\nWait ...")
     for x in range(1, width - 1):
         for y in range(1, height - 1):
             pixel_color = image.getpixel((x, y))
@@ -51,7 +51,7 @@ def main():
             output_path = "modified_image.jpg"
             processed_image.save(output_path)
             print(f"Modified image saved as {output_path}")
-            original_image.close()
+            outputImage.close()
             processed_image.close()
             print("-> DONE <-")
 
